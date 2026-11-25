@@ -1,0 +1,4 @@
+mujoco==3.3.5
+numpy<2
+robosuite
+requests

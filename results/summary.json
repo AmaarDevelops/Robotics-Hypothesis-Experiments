@@ -1,0 +1,33 @@
+{
+ "planner": "nvidia/nemotron-3-ultra-550b-a55b:free",
+ "requests_used": 29,
+ "phaseA": {
+  "first_try_success": "7/8",
+  "eventual_success": "7/8",
+  "geo10N_fixed": "5/8",
+  "geo20N_fixed": "3/8"
+ },
+ "phaseB": {
+  "recovered": "4/6",
+  "attempts": [
+   null,
+   1,
+   3,
+   2,
+   2,
+   null
+  ],
+  "mean_attempts_when_recovered": 2.0,
+  "handcoded_rule_attempts": [
+   2,
+   3,
+   2,
+   2,
+   3,
+   2
+  ],
+  "random_search_P_success_within_4": 0.31
+ },
+ "invalid_replies": 6,
+ "mean_latency_s": 49.4
+}

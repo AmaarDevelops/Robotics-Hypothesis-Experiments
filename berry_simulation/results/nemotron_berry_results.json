@@ -1,0 +1,430 @@
+[
+ {
+  "sample": 0,
+  "initial_policy": {
+   "pick_if_ripeness_above": 0.6,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 4.0,
+   "squeeze_force_N": 1.5,
+   "pull_offset_from_stem_deg": 180.0,
+   "pull_elevation_deg": -30.0,
+   "pull_speed_m_per_s": 0.05,
+   "twist_rad": 0.5
+  },
+  "final_policy": {
+   "pick_if_ripeness_above": 0.55,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 3.5,
+   "squeeze_force_N": 1.2,
+   "pull_offset_from_stem_deg": 180.0,
+   "pull_elevation_deg": -20.0,
+   "pull_speed_m_per_s": 0.03,
+   "twist_rad": 0.7
+  },
+  "reason": "Ripeness threshold 0.6 avoids unripe picks given sensor noise. Approach opposite leaf (180\u00b0) prevents collision. Finger gap 4 cm fits berry. Squeeze 1.5 N holds without crushing. Pull opposite stem (180\u00b0) and downward (-30\u00b0) detaches ripe berries. Moderate speed 0.05 m/s and twist 0.5 rad aid clean ",
+  "zero_shot_success": 0.73,
+  "success_after_feedback": [
+   0.73,
+   0.73,
+   0.625
+  ],
+  "learning_curve": [
+   [
+    0,
+    0.73
+   ],
+   [
+    480,
+    0.735
+   ],
+   [
+    960,
+    0.815
+   ],
+   [
+    1440,
+    0.865
+   ],
+   [
+    1920,
+    0.87
+   ],
+   [
+    2400,
+    0.91
+   ],
+   [
+    2880,
+    0.9
+   ],
+   [
+    3360,
+    0.935
+   ],
+   [
+    3840,
+    0.91
+   ],
+   [
+    4320,
+    0.925
+   ],
+   [
+    4800,
+    0.91
+   ]
+  ],
+  "trained_theta": [
+   8.51092902772174,
+   -4.300315915522615,
+   -1.6456765987690225,
+   -0.10651872730318306,
+   0.11073253307726126,
+   0.09400757648883662,
+   -0.6634082179131863,
+   -0.2157829473698357,
+   0.04097903004966421,
+   0.7265163936758189,
+   -0.7097217344971428,
+   0.06542707939680793,
+   -0.19349569827584942,
+   0.2989848068669794,
+   -0.7601165453707907,
+   -0.0118362147682968,
+   -76.75673714310491,
+   0.05193762442318365,
+   0.33095146171525
+  ],
+  "transfer": {
+   "sim_A": 0.91,
+   "real_before": 0.675,
+   "real_after": 0.88,
+   "fit": {
+    "friction": 0.7,
+    "break_scale": 1.2,
+    "hist_gap": 0.0
+   }
+  }
+ },
+ {
+  "sample": 1,
+  "initial_policy": {
+   "pick_if_ripeness_above": 0.6,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 4.0,
+   "squeeze_force_N": 2.0,
+   "pull_offset_from_stem_deg": 0.0,
+   "pull_elevation_deg": 30.0,
+   "pull_speed_m_per_s": 0.05,
+   "twist_rad": 0.5
+  },
+  "final_policy": {
+   "pick_if_ripeness_above": 0.6,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 4.0,
+   "squeeze_force_N": 1.5,
+   "pull_offset_from_stem_deg": 0.0,
+   "pull_elevation_deg": 30.0,
+   "pull_speed_m_per_s": 0.04,
+   "twist_rad": 0.2
+  },
+  "reason": "Approach from opposite side of leaf to avoid collision; pick threshold accounts for sensor noise; gentle squeeze and upward pull along stem direction with slight twist to detach ripe berries without crushing.",
+  "zero_shot_success": 0.71,
+  "success_after_feedback": [
+   0.71,
+   0.645,
+   0.645
+  ],
+  "learning_curve": [
+   [
+    0,
+    0.71
+   ],
+   [
+    480,
+    0.78
+   ],
+   [
+    960,
+    0.79
+   ],
+   [
+    1440,
+    0.785
+   ],
+   [
+    1920,
+    0.795
+   ],
+   [
+    2400,
+    0.775
+   ],
+   [
+    2880,
+    0.755
+   ],
+   [
+    3360,
+    0.755
+   ],
+   [
+    3840,
+    0.775
+   ],
+   [
+    4320,
+    0.77
+   ],
+   [
+    4800,
+    0.77
+   ]
+  ],
+  "trained_theta": [
+   8.007197301671352,
+   -4.222866174261884,
+   -1.3459623785746138,
+   0.45428465676163254,
+   -0.2817741124234758,
+   -0.7844819571227135,
+   -1.0664599865808613,
+   0.38815327229525637,
+   0.0447818304274528,
+   1.0328168648034617,
+   1.3987929729794022,
+   0.07622814842256105,
+   -0.045232148721665234,
+   0.8540832495227891,
+   1.710982768799573,
+   -0.23754679556956526,
+   43.339673954032406,
+   0.03037503509622004,
+   0.15661735439734914
+  ],
+  "transfer": {
+   "sim_A": 0.77,
+   "real_before": 0.71,
+   "real_after": 0.79,
+   "fit": {
+    "friction": 0.7,
+    "break_scale": 1.2,
+    "hist_gap": 0.0
+   }
+  }
+ },
+ {
+  "sample": 2,
+  "initial_policy": {
+   "pick_if_ripeness_above": 0.65,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 4.0,
+   "squeeze_force_N": 3.0,
+   "pull_offset_from_stem_deg": 0.0,
+   "pull_elevation_deg": 30.0,
+   "pull_speed_m_per_s": 0.05,
+   "twist_rad": 0.5
+  },
+  "final_policy": {
+   "pick_if_ripeness_above": 0.62,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 4.0,
+   "squeeze_force_N": 2.5,
+   "pull_offset_from_stem_deg": 0.0,
+   "pull_elevation_deg": 30.0,
+   "pull_speed_m_per_s": 0.06,
+   "twist_rad": 0.4
+  },
+  "reason": "Set ripeness threshold above true ripe boundary to account for sensor noise; approach from opposite side of leaf to avoid collision; moderate squeeze to hold without crushing; pull upward along stem direction with slight twist to promote clean detachment.",
+  "zero_shot_success": 0.67,
+  "success_after_feedback": [
+   0.67,
+   0.655,
+   0.73
+  ],
+  "learning_curve": [
+   [
+    0,
+    0.67
+   ],
+   [
+    480,
+    0.77
+   ],
+   [
+    960,
+    0.735
+   ],
+   [
+    1440,
+    0.72
+   ],
+   [
+    1920,
+    0.77
+   ],
+   [
+    2400,
+    0.765
+   ],
+   [
+    2880,
+    0.765
+   ],
+   [
+    3360,
+    0.775
+   ],
+   [
+    3840,
+    0.755
+   ],
+   [
+    4320,
+    0.765
+   ],
+   [
+    4800,
+    0.765
+   ]
+  ],
+  "trained_theta": [
+   11.704732080153724,
+   -5.609300761418949,
+   -0.9618909386321866,
+   -0.080460192331556,
+   0.6513102533616909,
+   0.4156892181132656,
+   -1.1273470389825582,
+   0.25145447294926165,
+   0.039144733632648976,
+   1.0645617367362967,
+   1.075112330250765,
+   -0.1510721092771167,
+   0.6847244252204953,
+   -0.39035442349293187,
+   1.4885663010470844,
+   -0.14889426118707597,
+   35.55974548064112,
+   0.053827405751630815,
+   0.7825945023742203
+  ],
+  "transfer": {
+   "sim_A": 0.765,
+   "real_before": 0.75,
+   "real_after": 0.725,
+   "fit": {
+    "friction": 0.9,
+    "break_scale": 1.6,
+    "hist_gap": 0.033
+   }
+  }
+ },
+ {
+  "sample": 3,
+  "initial_policy": {
+   "pick_if_ripeness_above": 0.6,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 3.5,
+   "squeeze_force_N": 3.0,
+   "pull_offset_from_stem_deg": 180.0,
+   "pull_elevation_deg": -30.0,
+   "pull_speed_m_per_s": 0.05,
+   "twist_rad": 1.0
+  },
+  "final_policy": {
+   "pick_if_ripeness_above": 0.55,
+   "approach_offset_from_leaf_deg": 180.0,
+   "finger_gap_cm": 3.6,
+   "squeeze_force_N": 1.2,
+   "pull_offset_from_stem_deg": 180.0,
+   "pull_elevation_deg": -10.0,
+   "pull_speed_m_per_s": 0.06,
+   "twist_rad": 0.3
+  },
+  "reason": "Set ripeness threshold to 0.6 to avoid picking unripe berries given sensor noise; approach from opposite side of leaf to avoid collision; pull away from stem with slight downward angle and twist to cleanly detach ripe berries.",
+  "zero_shot_success": 0.71,
+  "success_after_feedback": [
+   0.71,
+   0.565,
+   0.63
+  ],
+  "learning_curve": [
+   [
+    0,
+    0.71
+   ],
+   [
+    480,
+    0.785
+   ],
+   [
+    960,
+    0.815
+   ],
+   [
+    1440,
+    0.83
+   ],
+   [
+    1920,
+    0.85
+   ],
+   [
+    2400,
+    0.87
+   ],
+   [
+    2880,
+    0.87
+   ],
+   [
+    3360,
+    0.855
+   ],
+   [
+    3840,
+    0.87
+   ],
+   [
+    4320,
+    0.885
+   ],
+   [
+    4800,
+    0.885
+   ]
+  ],
+  "trained_theta": [
+   13.38048339347664,
+   -5.619302696771349,
+   -1.4074857178073064,
+   0.000316450896592065,
+   0.052417961357908716,
+   0.754896266996314,
+   -0.7167615713703203,
+   0.21717500770738543,
+   0.035091095035628156,
+   1.2201820133353733,
+   -0.7502766250269718,
+   -0.11582381379517946,
+   0.07911703180666005,
+   0.04901151019441368,
+   -0.6671572883646074,
+   -0.10985256319705837,
+   -89.285604460123,
+   0.07068775198039856,
+   0.9620084256227875
+  ],
+  "transfer": {
+   "sim_A": 0.885,
+   "real_before": 0.825,
+   "real_after": 0.785,
+   "fit": {
+    "friction": 0.8,
+    "break_scale": 1.4,
+    "hist_gap": 0.067
+   }
+  }
+ }
+]

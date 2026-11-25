@@ -1,0 +1,38 @@
+{
+ "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+ "level": "L2",
+ "episodes": 3,
+ "success": "3/3",
+ "chunks_per_episode": [
+  10,
+  14,
+  12
+ ],
+ "steps": [
+  73,
+  135,
+  227
+ ],
+ "grasp_attempts": [
+  1,
+  1,
+  1
+ ],
+ "table_contact_steps": [
+  1,
+  0,
+  0
+ ],
+ "cube_pushed_m": [
+  0.02,
+  0.006,
+  0.006
+ ],
+ "invalid_replies": [
+  0,
+  0,
+  0
+ ],
+ "median_latency_s": 7.35,
+ "requests_used": 36
+}
